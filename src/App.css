@@ -4,10 +4,19 @@ html, body, .root {
 body {
   line-height: 1.5;
 }
-body, .app {
-  background: white;
-}
 
+body:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./bookshelf.jpg");
+  width: 100%;
+  height: 1600px;
+  opacity : 0.5;
+  z-index: -1;
+}
 /* main page */
 
 .list-books-title {
@@ -19,6 +28,7 @@ body, .app {
   font-weight: 400;
   margin: 0;
   color: white;
+  font-size: 3vw;
 }
 
 .list-books-content {
@@ -38,7 +48,15 @@ body, .app {
 
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
+  background-color: white;
+  width: 200px;
+  
 }
+
+.Bookshelf-line {
+  border-bottom: 5px solid white;
+}
+
 .bookshelf-books {
   text-align: center;
 }
@@ -121,6 +139,8 @@ body, .app {
 
 .book {
   width: 140px;
+  background-color: white;
+  
 }
 .book-title,
 .book-authors {
@@ -166,6 +186,9 @@ body, .app {
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .book-cover-title {
   padding: 20px 10px 0;
